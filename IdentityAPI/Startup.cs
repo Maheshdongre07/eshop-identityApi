@@ -61,14 +61,14 @@ namespace IdentityAPI
             app.UseCors();
 
             app.UseSwagger();
-            if (env.IsDevelopment())
-            {
+            //if (env.IsDevelopment())
+            //{
                 app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Identity API");
                 c.RoutePrefix ="";
             });
-            }
+            //}
             InitializeDatabase(app);
             app.UseMvc();
         }
